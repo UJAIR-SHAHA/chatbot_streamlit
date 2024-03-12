@@ -11,7 +11,7 @@ Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llamaindex-chat-with-docs.streamlit.app/)
+-- To be released soon
 
 ## Get an OpenAI API key
 
