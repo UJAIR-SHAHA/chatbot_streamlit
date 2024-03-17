@@ -8,16 +8,16 @@ from llama_index.core import SimpleDirectoryReader
 secret= "secret.toml"
 st.set_page_config(page_title="Chat with our Ai virtaul assistant", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
 openai.api_key = st.secrets.openai_key
-st.title("Chat with the our virtaul assistant.")
+st.title("Chat with our virtaul assistant.")
          
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [
-        {"role": "assistant", "content": "Welcome. how can i help you."}
+        {"role": "assistant", "content": "Welcome. I am here to help you with buying a mobile phone."}
     ]
 
 @st.cache_resource(show_spinner=False)
 def load_data():
-    with st.spinner(text="Loading and indexing the Streamlit docs – hang tight! This should take 1-2 minutes."):
+    with st.spinner(text="Processing please wait. This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are a virtaul assistant for mobile shop which help customers to buy a mobile phones. Also make converstion with customers regarding their choice and recommend them mobile phone to buy."))
