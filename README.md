@@ -1,10 +1,9 @@
-# 🦙📚 LlamaIndex - Chat with the Streamlit docs
+# AI Virtual assistant for mobile shops.
 
-Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the Streamlit docs (or your own data).
+Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the predefined knowledge base.
 
 ## Overview of the App
 
-<img src="app.png" width="75%">
 
 - Takes user queries via Streamlit's `st.chat_input` and displays both user queries and model responses with `st.chat_message`
 - Uses LlamaIndex to load and index data and create a chat engine that will retrieve context from that data to respond to each user query
