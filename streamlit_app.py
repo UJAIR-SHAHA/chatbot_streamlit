@@ -57,7 +57,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
 if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state.messages) == 1:
     # Define button texts and their corresponding predefined queries
     button_queries = {
-        "Check available Brands": "Can you provide all the available brands",
+        "Check available Brands": "give the list all the available mobile brands",
         "explore": "Can you tell me more about the available color options?"
         # Add more button texts and predefined queries as needed
     }
