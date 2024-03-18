@@ -16,12 +16,12 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
         {"role": "assistant", "content": "Welcome. I am here to help you with buying a mobile phone."}
     ]
     
-predefined_queries = [
-    "Can you tell me more about the camera specifications?",
-    "What are the available color options?",
-    "I'd like to know about the battery life of this phone.",
-    # Add more queries as needed
-]
+# predefined_queries = [
+#     "Can you tell me more about the camera specifications?",
+#     "What are the available color options?",
+#     "I'd like to know about the battery life of this phone.",
+#     # Add more queries as needed
+# ]
 
 @st.cache_resource(show_spinner=False)
 def load_data():
@@ -53,14 +53,20 @@ if st.session_state.messages[-1]["role"] != "assistant":
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
             
-# Add a button below the chat response
+# Check if the last message is from the assistant
 if st.session_state.messages[-1]["role"] == "assistant":
-    if st.button("Request More Information"):
-        # Select a predefined query randomly
-        predefined_query = random.choice(predefined_queries)
-        # Respond with the predefined query
-        with st.spinner("Thinking..."):
-            response = st.session_state.chat_engine.chat(predefined_query)
-            st.write(response.response)
-            message = {"role": "assistant", "content": response.response}
-            st.session_state.messages.append(message)
+    # Define button texts and their corresponding predefined queries
+    button_queries = {
+        "Check available Brands": "Can you provide more the available brands",
+        "explore": "Can you tell me more about the available color options?"
+        # Add more button texts and predefined queries as needed
+    }
+    
+    # Display each button and handle its click event
+    for button_text, predefined_query in button_queries.items():
+        if st.button(button_text):
+            # Respond with the predefined query
+            with st.spinner("Thinking..."):
+                st.write(predefined_query)
+                message = {"role": "assistant", "content": predefined_query}
+                st.session_state.messages.append(message)
