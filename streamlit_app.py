@@ -34,6 +34,8 @@ def load_data():
                                                                   if user does not specify speficic detail then consider giving the answer based on your current response.
                                                                   
                                                                   do not ask user for specific feature repeatedly for each product provide all the details when needed.
+                                                                  
+                                                                  ask user to visit the product page when they want to buy a product.
                                                                 
                                                                   
                                                                   .'''))
