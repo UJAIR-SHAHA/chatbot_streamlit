@@ -54,7 +54,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.session_state.messages.append(message) # Add response to message history
             
 # Check if the last message is from the assistant
-if st.session_state.messages[-1]["role"] == "assistant":
+if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state.messages) == 1:
     # Define button texts and their corresponding predefined queries
     button_queries = {
         "Check available Brands": "Can you provide more the available brands",
