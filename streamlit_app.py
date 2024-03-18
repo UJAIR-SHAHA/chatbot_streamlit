@@ -53,12 +53,13 @@ if st.session_state.messages[-1]["role"] != "assistant":
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
             
-            # Add a button below the chat response
-            if st.button("Request More Information"):
-                # Select a predefined query randomly
-                predefined_query = random.choice(predefined_queries)
-                # Respond with the predefined query
-                with st.spinner("Thinking..."):
-                    st.write(predefined_query)
-                    message = {"role": "assistant", "content": predefined_query}
-                    st.session_state.messages.append(message)
+# Add a button below the chat response
+if st.session_state.messages[-1]["role"] == "assistant":
+    if st.button("Request More Information"):
+        # Select a predefined query randomly
+        predefined_query = random.choice(predefined_queries)
+        # Respond with the predefined query
+        with st.spinner("Thinking..."):
+            st.write(predefined_query)
+            message = {"role": "assistant", "content": predefined_query}
+            st.session_state.messages.append(message)
