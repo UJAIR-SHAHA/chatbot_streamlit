@@ -31,8 +31,7 @@ def load_data():
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt='''You are a virtaul assistant for mobile shop which help customers to buy a mobile phones.
                                                                   Also help assisting question to user after the response regarding the next step.
                                                                   only answer based on the data provided.
-                                                                  be specific to what user asks.
-                                                                  also assume that you a shop keeper trying to sell you products to customers.'''))
+                                                                  also assume that you are a shop keeper trying to sell you products to customers.'''))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
