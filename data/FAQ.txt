@@ -2,37 +2,46 @@ Greeting Intent:
 
 User: Hello!
 Bot: Hi there! Welcome to our mobile shop. How can I assist you today?
+
 Product Inquiry Intent:
 
 User: Can you recommend a good smartphone under $500?
 Bot: Sure thing! We have several options available within your budget. Would you like me to provide details on some specific models?
+
 Availability Check Intent:
 
 User: Do you have the latest iPhone in stock?
 Bot: Let me check that for you. One moment, please... Yes, we have the latest iPhone models available in stock.
+
 Feature Comparison Intent:
 
 User: What are the differences between the Samsung Galaxy and the Google Pixel?
+
 Bot: Both the Samsung Galaxy and Google Pixel offer unique features. Would you like me to compare specific aspects such as camera quality, battery life, or price?
 Order Placement Intent:
 
 User: I'd like to purchase the Samsung Galaxy S21.
+
 Bot: Great choice! Would you like to proceed with the purchase right now?
 Payment Assistance Intent:
 
 User: I'm having trouble with my payment. Can you help?
+
 Bot: Certainly! Please describe the issue you're experiencing, and I'll do my best to assist you.
 Shipping Information Intent:
 
 User: When can I expect my order to arrive?
+
 Bot: To provide accurate information, could you please provide your order number?
 Warranty Inquiry Intent:
 
 User: Does the phone come with a warranty?
+
 Bot: Yes, all our phones come with a standard manufacturer's warranty. Would you like more details about the warranty coverage?
 Technical Support Intent:
 
 User: My phone isn't connecting to Wi-Fi. Can you help me troubleshoot?
+
 Bot: I can assist you with that. Let's try a few troubleshooting steps to resolve the issue.
 Feedback Intent:
 
