@@ -69,6 +69,7 @@ if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state
     # Display each button and handle its click event
     for button_text, predefined_query in button_queries.items():
         if st.button(button_text):
+            st.session_state.messages.append({"role": "user", "content": button_text})
             with st.chat_message("assistant"):
                 with st.spinner("Thinking..."):
                     st.write(predefined_query)
