@@ -57,7 +57,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
 if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state.messages) == 1:
     # Define button texts and their corresponding predefined queries
     button_queries = {
-        "Check available Brands": "can you tell me the tha avaible brands you offer.",
+        "Check available Brands": "can you tell me the avaible brands you offer.",
         "explore": "Can you tell me more about the available color options?"
         # Add more button texts and predefined queries as needed
     }
@@ -67,7 +67,7 @@ if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state
         if st.button(button_text):
             with st.chat_message("assistant"):
                 with st.spinner("Thinking..."):
-                    response = st.session_state.chat_engine.chat(prompt)
+                    response = st.session_state.chat_engine.chat(predefined_query)
                     st.write(response.response)
                     message = {"role": "assistant", "content": response.response}
                     st.session_state.messages.append(message)
