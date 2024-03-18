@@ -3,6 +3,7 @@ from llama_index.core import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms.openai import OpenAI
 import openai
 from llama_index.core import SimpleDirectoryReader
+import random
 
 
 secret= "secret.toml"
@@ -14,6 +15,13 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
     st.session_state.messages = [
         {"role": "assistant", "content": "Welcome. I am here to help you with buying a mobile phone."}
     ]
+    
+predefined_queries = [
+    "Can you tell me more about the camera specifications?",
+    "What are the available color options?",
+    "I'd like to know about the battery life of this phone.",
+    # Add more queries as needed
+]
 
 @st.cache_resource(show_spinner=False)
 def load_data():
@@ -44,3 +52,13 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response.response)
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
+            
+            # Add a button below the chat response
+            if st.button("Request More Information"):
+                # Select a predefined query randomly
+                predefined_query = random.choice(predefined_queries)
+                # Respond with the predefined query
+                with st.spinner("Thinking..."):
+                    st.write(predefined_query)
+                    message = {"role": "assistant", "content": predefined_query}
+                    st.session_state.messages.append(message)
