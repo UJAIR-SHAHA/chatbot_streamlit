@@ -5,7 +5,7 @@ Bot: Hi there! Welcome to our mobile shop. How can I assist you today?
 
 Product Inquiry Intent:
 
-User: Can you recommend a good smartphone under $500?
+User: Can you recommend a good smartphone under 500?
 Bot: Sure thing! We have several options available within your budget. Would you like me to provide details on some specific models?
 
 Availability Check Intent:

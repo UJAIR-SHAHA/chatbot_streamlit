@@ -6,7 +6,7 @@ from llama_index.core import SimpleDirectoryReader
 import random
 
 
-secret= "secret.toml"
+secrets= "secret.toml"
 st.set_page_config(page_title="Chat with our Ai virtaul assistant", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
 openai.api_key = st.secrets.openai_key
 st.title("Chat with our virtaul assistant.")
@@ -28,10 +28,12 @@ def load_data():
     with st.spinner(text="Processing please wait. This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt='''Act as a virtual shop assistant which try to sell the mobile phones to user..
-                                                                  Also help assisting question to user after the each response regarding the next step.
+        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt='''Act as a virtual shop assistant which try to sell the mobile phones to user.
+                                                                  Also help assisting question to user after the response regarding the next step only when needed.
                                                                   only answer based on the data provided.
                                                                   if user does not specify speficic detail then consider giving the answer based on your current response.
+                                                                  
+                                                                  do not ask user for specific feature repeatedly for each product provide all the details when needed.
                                                                 
                                                                   
                                                                   .'''))
