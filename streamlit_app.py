@@ -58,11 +58,11 @@ if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state
     # Define button texts and their corresponding predefined queries
     button_queries = {
         "Check available Brands": '''We offer following brands:
-        1)Samsung
-        2)realme
-        3)oppo
-        4)Apple
-        5)Nokia
+        Samsung
+        , realme
+        , oppo
+        , Apple
+        , Nokia
         and many other brands. please specify which brand would you like check out''',        
     }
     
