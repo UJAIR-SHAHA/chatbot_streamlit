@@ -31,6 +31,7 @@ def load_data():
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt='''Act as a virtual shop assistant which try to sell the mobile phones to user..
                                                                   Also help assisting question to user after the each response regarding the next step.
                                                                   only answer based on the data provided.
+                                                                  if user does not specify speficic detail then consider giving the answer based on your current response.
                                                                 
                                                                   
                                                                   .'''))
