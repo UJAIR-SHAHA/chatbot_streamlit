@@ -60,6 +60,7 @@ if st.session_state.messages[-1]["role"] == "assistant":
         predefined_query = random.choice(predefined_queries)
         # Respond with the predefined query
         with st.spinner("Thinking..."):
-            st.write(predefined_query)
-            message = {"role": "assistant", "content": predefined_query}
+            response = st.session_state.chat_engine.chat(predefined_query)
+            st.write(response.response)
+            message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message)
