@@ -66,7 +66,7 @@ if st.session_state.messages[-1]["role"] == "assistant":
     for button_text, predefined_query in button_queries.items():
         if st.button(button_text):
             # Respond with the predefined query
-            with st.spinner("Thinking..."):
-                st.write(predefined_query)
-                message = {"role": "assistant", "content": predefined_query}
-                st.session_state.messages.append(message)
+            response = st.session_state.chat_engine.chat(predefined_query)
+            st.write(response.response)
+            message = {"role": "assistant", "content": response.response}
+            st.session_state.messages.append(message)
