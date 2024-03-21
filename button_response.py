@@ -6,7 +6,7 @@ def button_responses(messages):
             if "product page" in message["content"]:
                 if st.button("Visit product page"):
         # Define the URL of the product page
-                    product_page_url = "https://example.com/product-page"  # Replace this with the actual URL
+                    product_page_url = "https://github.com/UJAIR-SHAHA/chatbot_streamlit"  # Replace this with the actual URL
 
         # Display a clickable hyperlink to the product page
                     st.markdown(f"[Click here to visit the product page]({product_page_url})")
