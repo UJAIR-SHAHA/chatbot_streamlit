@@ -1,4 +1,5 @@
 import streamlit as st
+import webbrowser
 
 def button_responses(messages):
     for message in messages:
@@ -8,13 +9,6 @@ def button_responses(messages):
         # Define the URL of the product page
                     product_page_url = "https://github.com/UJAIR-SHAHA/chatbot_streamlit"  # Replace this with the actual URL
 
-        # Display a clickable hyperlink to the product page
-                    st.markdown(f"[Click here to visit the product page]({product_page_url})")
-            elif "color options" in message["content"]:
-                if st.button("Request Color Options"):
-                    predefined_query = "Can you tell me more about the available color options?"
-                    with st.spinner("Thinking..."):
-                        st.write(predefined_query)
-                        message = {"role": "assistant", "content": predefined_query}
-                        messages.append(message)
+                    webbrowser.open_new_tab(product_page_url)
+            
             # Add more conditions as needed for other responses
