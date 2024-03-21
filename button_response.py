@@ -1,5 +1,6 @@
 import streamlit as st
 import webbrowser
+import time
 
 def button_responses(messages):
     for message in messages:
@@ -9,9 +10,9 @@ def button_responses(messages):
         # Define the URL of the product page
                     product_page_url = "https://github.com/UJAIR-SHAHA/chatbot_streamlit"  # Replace this with the actual URL
 
-                    st.write(
-                        f'<script>window.open("{product_page_url}");</script>',
-                        unsafe_allow_html=True
-                    )
+                    st.markdown(f'<meta http-equiv="refresh" content="0;URL={product_page_url}">', unsafe_allow_html=True)
+                    
+                    # Add a short delay to allow redirection
+                    time.sleep(1)
             
             # Add more conditions as needed for other responses
