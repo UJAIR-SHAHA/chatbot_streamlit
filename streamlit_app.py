@@ -4,6 +4,7 @@ from llama_index.llms.openai import OpenAI
 import openai
 from llama_index.core import SimpleDirectoryReader
 import random
+from button_response import button_responses
 
 
 secrets= "secret.toml"
@@ -63,6 +64,8 @@ if st.session_state.messages[-1]["role"] != "assistant":
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
             
+button_responses(st.session_state.messages)
+                      
 # Check if the last message is from the assistant
 if st.session_state.messages[-1]["role"] == "assistant" and len(st.session_state.messages) == 1:
     # Define button texts and their corresponding predefined queries
