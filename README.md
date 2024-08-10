@@ -1,6 +1,6 @@
 # AI Virtual assistant for mobile shops.
 
-Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the predefined knowledge base.
+Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the predefined knowledge base. It a Virtual Assistant to be used by customers to Explore the categories, features and prices of the Mobile Phones. 
 
 ## Overview of the App
 
@@ -10,7 +10,7 @@ Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of
 
 ## Demo App
 
--- To be released soon
+-- [click Here] (https://chatbotapp-emfekax6dtdu7ic4mrvihz.streamlit.app/)
 
 ## Get an OpenAI API key
 
