@@ -10,7 +10,7 @@ Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of
 
 ## Demo App
 
--- [click Here](https://chatbotapp-emfekax6dtdu7ic4mrvihz.streamlit.app/)
+-- [Click Here](https://chatbotapp-emfekax6dtdu7ic4mrvihz.streamlit.app/)
 
 ## Get an OpenAI API key
 
