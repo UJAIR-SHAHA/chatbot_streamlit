@@ -1,6 +1,6 @@
 # AI Virtual Assistant for Mobile Store.
 
-Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the predefined knowledge base. It a Virtual Assistant to be used by customers to Explore the categories, features and prices of the Mobile Phones. 
+Build a RAG based Chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the predefined knowledge base. It a Virtual Assistant to be used by customers to Explore the categories, features and prices of the Mobile Phones. 
 
 ## Overview of the App
 
